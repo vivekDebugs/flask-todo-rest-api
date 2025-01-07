@@ -7,4 +7,8 @@ def create_app():
     def index():
         return 'Hello World'
 
+    # Register blueprint
+    from app.controllers.todo_controller import todo_bp
+    app.register_blueprint(todo_bp)
+
     return app
